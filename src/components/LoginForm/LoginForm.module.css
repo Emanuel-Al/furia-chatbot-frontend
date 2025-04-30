@@ -1,0 +1,73 @@
+.container {
+    background-color: #000; /* fundo preto */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    color: black;
+    font-family: "Roboto Mono", monospace;
+    font-size: 24px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .furiaLogo {
+    width: 40px; 
+    height: 40px; 
+    margin-left: 10px;
+  }
+  
+  .form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .inputBox {
+    margin-bottom: 15px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+
+  .inputArea{
+    color: red;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    width: 100%;
+  }
+
+  .footerText {
+    text-align: center; 
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;       
+    margin-top: 15px;        
+    color: #333;            
+  }
+  
+  .link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
