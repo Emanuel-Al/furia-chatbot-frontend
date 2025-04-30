@@ -9,6 +9,7 @@ import FuriaLogo from "../../assets/Furia_Esports_logo.svg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const registerSchema = z.object({
   name: z
@@ -62,8 +63,8 @@ const RegisterForm: React.FC = () => {
         className={styles.form}
       >
         <div className={styles.header}>
-          <h2 className={styles.title}>Junte-se a legião de furiosos!</h2>
           <img src={FuriaLogo} alt="Fúria Logo" className={styles.furiaLogo} />
+          <h2 className={styles.title}>Junte-se a legião de furiosos!</h2>
         </div>
         <div className="inputBox">
           <div className="inputArea">
@@ -99,7 +100,15 @@ const RegisterForm: React.FC = () => {
               <p className={styles.error}>{errors.password.message}</p>
             )}
           </div>
-          <FormButton text="Registrar-se" />
+          <div className="footer">
+            <FormButton text="Registrar-se" />
+            <h4 className={styles.footerText}>
+              Já possui uma conta?{" "}
+              <Link to="/login" className={styles.link}>
+                Fazer Login
+              </Link>
+            </h4>
+          </div>
         </div>
       </form>
       <ToastContainer position="top-right" autoClose={3000} />
