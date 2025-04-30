@@ -26,6 +26,8 @@ const InputField: React.FC<InputFieldProps> = ({
         sx={{
           "& .MuiOutlinedInput-root": {
             borderRadius: "12px",
+            color: "black",
+            backgroundColor: "#f5f5f5",
           },
         }}
       />
