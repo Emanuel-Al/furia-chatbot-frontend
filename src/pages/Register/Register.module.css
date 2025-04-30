@@ -1,0 +1,8 @@
+.container {
+    background-color:#000;
+    height: 100vh;          /* ocupar toda a altura da tela */
+    display: flex;
+    justify-content: center; /* centralizar horizontalmente */
+    align-items: center;     /* centralizar verticalmente */
+  }
+  
