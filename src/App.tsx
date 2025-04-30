@@ -1,10 +1,10 @@
-import './App.css'
+import RouterProvider from "./routes/index.routes"
 
 function App() {
 
   return (
     <>
-      <p>Setup</p>
+      <RouterProvider/>
     </>
   )
 }
