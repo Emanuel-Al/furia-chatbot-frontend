@@ -58,6 +58,7 @@ const LoginForm: React.FC = () => {
       <div className={styles.inputBox}>
         <div className={styles.inputArea}>
           <InputField
+            type="text"
             label="Email"
             size="small"
             name="email"
@@ -70,6 +71,7 @@ const LoginForm: React.FC = () => {
 
         <div className={styles.inputArea}>
           <InputField
+            type="password"
             label="Password"
             size="small"
             name="password"

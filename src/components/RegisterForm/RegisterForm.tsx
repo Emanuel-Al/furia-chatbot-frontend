@@ -69,6 +69,7 @@ const RegisterForm: React.FC = () => {
         <div className="inputBox">
           <div className="inputArea">
             <InputField
+              type="text"
               label="Nome"
               size="small"
               name="name"
@@ -80,6 +81,7 @@ const RegisterForm: React.FC = () => {
           </div>
           <div className="inputArea">
             <InputField
+              type="text"
               label="Email"
               size="small"
               name="email"
@@ -91,6 +93,7 @@ const RegisterForm: React.FC = () => {
           </div>
           <div className="inputArea">
             <InputField
+              type="password"
               label="Senha"
               size="small"
               name="password"
