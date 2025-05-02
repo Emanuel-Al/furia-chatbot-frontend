@@ -10,6 +10,7 @@ type Message = {
 
 const Chat: React.FC = () => {
   const token = localStorage.getItem("token");
+  console.log(token);
   const [messages, setMessages] = useState<Message[]>([]);
   const [prompt, setPrompt] = useState("");
 
@@ -24,7 +25,7 @@ const Chat: React.FC = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MGZiYTlhMzMyNTk0NjVjNGFkNTc5ZiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNzQ2MTA5NzA3LCJleHAiOjE3NDYxMTY5MDd9.-kUG5rJ5UUwhokV6NnF1i9qEa18Sijgk2_KjUwvZkQU`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({ prompt }),
       });
