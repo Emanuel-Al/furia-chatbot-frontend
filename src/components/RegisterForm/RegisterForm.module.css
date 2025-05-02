@@ -54,4 +54,19 @@
   button {
     width: 100%;
   }
+  .footerText {
+    text-align: center; 
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;       
+    margin-top: 15px;        
+    color: #333;            
+  }
   
+  .link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }

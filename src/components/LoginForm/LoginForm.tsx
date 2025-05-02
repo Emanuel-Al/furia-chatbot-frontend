@@ -51,15 +51,14 @@ const LoginForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit(handleLoginSubmit)} className={styles.form}>
       <div className={styles.header}>
-        <h2 className={styles.title}>
-          Bem-vindo ao Fúria Chatbot
-          <img src={FuriaLogo} alt="Fúria Logo" className={styles.furiaLogo} />
-        </h2>
+        <img src={FuriaLogo} alt="Fúria Logo" className={styles.furiaLogo} />
+        <h2 className={styles.title}>Bem-vindo ao Fúria Chatbot</h2>
       </div>
 
       <div className={styles.inputBox}>
         <div className={styles.inputArea}>
           <InputField
+            type="text"
             label="Email"
             size="small"
             name="email"
@@ -72,6 +71,7 @@ const LoginForm: React.FC = () => {
 
         <div className={styles.inputArea}>
           <InputField
+            type="password"
             label="Password"
             size="small"
             name="password"
