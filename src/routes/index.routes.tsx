@@ -1,7 +1,7 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import Chat from "../pages/Chat";
+import Chat from "../pages/Chat/Chat";
 const RouterProvider = () => {
   return (
     <BrowserRouter>
