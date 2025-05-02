@@ -52,7 +52,6 @@ const Chat: React.FC = () => {
 
   return (
     <div className={styles.chatContainer}>
-      {/* Header */}
       <header className={styles.chatHeader}>
         <div className={styles.logoContainer}>
           <img src={FuriaLogo} alt="Fúria Logo" className={styles.logo} />
@@ -60,7 +59,6 @@ const Chat: React.FC = () => {
         </div>
       </header>
 
-      {/* Chat body */}
       <div className={styles.chatBody}>
         {messages.map((msg, index) => (
           <div
@@ -74,7 +72,6 @@ const Chat: React.FC = () => {
         ))}
       </div>
 
-      {/* Chat input */}
       <div className={styles.chatInput}>
         <input
           type="text"
