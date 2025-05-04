@@ -10,7 +10,13 @@ type Message = {
 
 const Chat: React.FC = () => {
   const token = localStorage.getItem("token");
-  const [messages, setMessages] = useState<Message[]>([]);
+  console.log(token);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      sender: "bot",
+      content: `Olá! Eu sou o chatBot da FÚRIA Esports. Me pergunte sobre partidas, jogadores, e mais!`,
+    },
+  ]);
   const [prompt, setPrompt] = useState("");
 
   const handleSend = async () => {
@@ -24,7 +30,7 @@ const Chat: React.FC = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MGZiYTlhMzMyNTk0NjVjNGFkNTc5ZiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNzQ2MTA5NzA3LCJleHAiOjE3NDYxMTY5MDd9.-kUG5rJ5UUwhokV6NnF1i9qEa18Sijgk2_KjUwvZkQU`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({ prompt }),
       });
@@ -51,7 +57,6 @@ const Chat: React.FC = () => {
 
   return (
     <div className={styles.chatContainer}>
-      {/* Header */}
       <header className={styles.chatHeader}>
         <div className={styles.logoContainer}>
           <img src={FuriaLogo} alt="Fúria Logo" className={styles.logo} />
@@ -59,7 +64,6 @@ const Chat: React.FC = () => {
         </div>
       </header>
 
-      {/* Chat body */}
       <div className={styles.chatBody}>
         {messages.map((msg, index) => (
           <div
@@ -73,7 +77,6 @@ const Chat: React.FC = () => {
         ))}
       </div>
 
-      {/* Chat input */}
       <div className={styles.chatInput}>
         <input
           type="text"

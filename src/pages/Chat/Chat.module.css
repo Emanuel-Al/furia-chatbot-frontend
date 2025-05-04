@@ -50,7 +50,8 @@
   }
   
   .user {
-    background-color: #ff4655;
+    background-color: white;
+    color: black;
     align-self: flex-end;
   }
   
@@ -80,10 +81,10 @@
   .sendButton {
     width: 44px;
     height: 44px; 
-    background-color: #ff4655;
+    background-color: white;
     border: none;
     border-radius: 50%;
-    color: white;
+    color: black;
     cursor: pointer;
     display: flex;
     align-items: center;
