@@ -1,54 +1,108 @@
-# React + TypeScript + Vite
+# 🐾 FURIA Chatbot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um chatbot interativo desenvolvido para fãs da organização **FURIA Esports**, que fornece informações atualizadas sobre suas modalidades, jogadores e desempenho nos campeonatos. Com uma interface simples e intuitiva, o usuário pode se cadastrar, realizar login e interagir diretamente com o bot para ficar por dentro de tudo que acontece com o time.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Autenticação de usuários (Login e Cadastro)
+- ✅ Chatbot que responde perguntas sobre a FURIA Esports
+- ✅ Base de conhecimento própria com foco em CS:GO e League of Legends
+- ✅ Interface moderna e responsiva
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Frontend
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [React Router Dom](https://reactrouter.com/)
+- [React Hook Form + Zod](https://react-hook-form.com/)
+- [CSS Modules](https://github.com/css-modules/css-modules)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Backend
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [JWT](https://jwt.io/)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🗃️ Base de Conhecimento
+
+O chatbot foi treinado com uma base textual construída manualmente, reunindo informações das seguintes fontes:
+
+- [Leaguepedia](https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki)
+- [Liquipedia](https://liquipedia.net/)
+- Sites oficiais da FURIA e torneios
+
+Ela inclui dados sobre:
+
+- História da organização
+- Modalidades: CS2, League of Legends, Valorant, Rainbow Six
+- Jogadores e line-ups
+- Títulos e participações em campeonatos
+- Momentos atuais nos torneios vigentes (como o 2º Split do CBLOL e ESL Pro League)
+
+## 📦 Como Rodar o Projeto
+
+### Pré-requisitos
+
+- Node.js e npm
+- MongoDB
+
+### Instalação
+
+1. Clone ambos os repositórios (front e back):
+   Front: https://github.com/Emanuel-Al/furia-chatbot-frontend.git
+   Back: https://github.com/Emanuel-Al/chatbot-furia-backend
+2. Instale as dependências do frontend:
+
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+3. Instale as dependências do backend:
+
+   ```bash
+   cd ../backend
+   npm install
+   ```
+
+4. Configure o MongoDB e as variáveis de ambiente (`.env`):
+
+   ```env
+   PORT=3000
+   MONGO_URI=mongodb://localhost:27017/furia-chat
+   JWT_SECRET=sua_chave_secreta
+   ```
+
+5. Inicie o backend:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Em outro terminal, inicie o frontend:
+   ```bash
+   cd ../frontend
+   npm run dev
+   ```
+
+---
+
+## 📈 Melhorias Futuras
+
+- Integração com APIs oficiais (Riot Games, HLTV, etc)
+- Web scraping automatizado para atualizar a base de conhecimento
+- Área de notícias ao vivo sobre partidas
+- Implementação de IA via RAG + LangChain para respostas mais dinâmicas
+
+---
+
+## 👤 Autor
+
+Desenvolvido por [Emanuel Reino](https://github.com/Emanuel-Al) - Ciência da Computação UFAPE  
+Contato: emanuelreino13@gmail.com
