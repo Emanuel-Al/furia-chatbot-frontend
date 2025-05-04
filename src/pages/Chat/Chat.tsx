@@ -11,7 +11,12 @@ type Message = {
 const Chat: React.FC = () => {
   const token = localStorage.getItem("token");
   console.log(token);
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      sender: "bot",
+      content: `Olá! Eu sou o chatBot da FÚRIA Esports. Me pergunte sobre partidas, jogadores, e mais!`,
+    },
+  ]);
   const [prompt, setPrompt] = useState("");
 
   const handleSend = async () => {
